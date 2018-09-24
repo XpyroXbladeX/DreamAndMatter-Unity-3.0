@@ -24,5 +24,6 @@ public class PlayerController : MonoBehaviour {
 			Debug.Log ("Meter is currently at "+meter);
 			Destroy (other.gameObject);
 		}
+			
 	}
 }
