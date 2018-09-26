@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 10f;
-	public int meter;
+	public static int meter;
 	public Text meterText;
 
 	// Use this for initialization
 	void Start () {
-		//meter = 50;
+		meter = 50;
 		meterText.text = meter.ToString();
 	}
 
