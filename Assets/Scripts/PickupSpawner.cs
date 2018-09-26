@@ -18,9 +18,9 @@ public class PickupSpawner : MonoBehaviour {
 		if (timer <= 0) {
 			//choose a random number for x position and spawn obstacle
 			xPos = Random.Range(-3,3);
-			Debug.Log ("X position is " + xPos);
+			//Debug.Log ("X position is " + xPos);
 			Instantiate(Obstacle, new Vector3(xPos,-10,0), Quaternion.identity);
-			Debug.Log("Obstacle Spawned!!!");
+			//Debug.Log("Obstacle Spawned!!!");
 			timer = 10;
 		} else if (timer > 0) {
 			timer -= Time.deltaTime;
