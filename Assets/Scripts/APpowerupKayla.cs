@@ -32,7 +32,7 @@ public class APpowerupKayla : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sprRender = GetComponent<SpriteRenderer> ();
-		sprRender.color -= new Color(0, 0, 0, Time.deltaTime);  //AP powerup starts transparent
+		sprRender.color -= new Color(1, 1, 1, Time.deltaTime);  //AP powerup starts transparent
 		WallBarrier.SetActive(true);                           //wall barriers start as active
 		StartCoroutine("LoseTime");                           //timer begins
 		Time.timeScale = 1;
@@ -41,9 +41,9 @@ public class APpowerupKayla : MonoBehaviour {
 	}
 
 	//Collision trigger
-	void onTriggerEnter (Collider other) {
-		if (other.CompareTag ("APpowerup")) {
-			Destroy (other.gameObject);                   //destroy the AP powerup on collision
+	void onCollisionEnter (Collision col) {
+		if (col.gameObject.name == "APpowerup") {
+			Destroy (col.gameObject);                   //destroy the AP powerup on collision
 			Debug.Log ("Trigger came first!");
 		}
 	}
@@ -58,14 +58,14 @@ public class APpowerupKayla : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Time.deltaTime < 10 && dreamer > 1) {
+		/*if (Time.deltaTime < 10 && dreamer > 1) {
 			sprRender.color -= new Color (1, 1, 1, Time.deltaTime);  //AP powerup becomes opaque
-		}
+		} */
 
 		if (CompareTag ("APpowerup")) {                       //if player collides with AP powerup
 			WallBarrier.SetActive (false);                   //disable wall barriers
 			//Destroy (CompareTag ("APpowerup"));           //destroy the AP powerup
-			dreamer -- ;//3;                               //decrease meter count
+			//dreamer -- ;//3;                               //decrease meter count
 			countdown.text = ("" + timeLeft);             //enable and show timer
 			LoseTime ();
 
