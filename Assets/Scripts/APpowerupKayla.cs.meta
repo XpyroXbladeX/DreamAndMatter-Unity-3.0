@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 97f6cbde7799114478926e0e1996f908
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - APpowerup: {fileID: 1385260666506518, guid: a468a572a3373824dbb463aa05ff70f7,
+      type: 2}
+  - WallBarrier: {fileID: 1967663829967564, guid: d751566dc84590d47becfb81df09884a,
+      type: 2}
+  - player: {fileID: 1197454812304714, guid: 2a86b58a8edef4c42a2384b7f6a576d5, type: 2}
+  - countdown: {instanceID: 0}
+  - meter: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
