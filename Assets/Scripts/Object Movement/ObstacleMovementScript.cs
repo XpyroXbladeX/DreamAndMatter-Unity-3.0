@@ -18,7 +18,7 @@ public class ObstacleMovementScript : MonoBehaviour {
 		transform.position = currentPosition;
 
 		if(transform.position.y > player.transform.position.y + 5) {
-			Debug.Log ("Goodbye Cruel World!");
+			//Debug.Log ("Goodbye Cruel World!");
 			Destroy (gameObject);
 		}
 	}
