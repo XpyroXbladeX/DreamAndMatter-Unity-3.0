@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 	public void playGame() {
-		SceneManager.LoadScene("Prototype Scene");
+		SceneManager.LoadScene("Kayla'sScene-LevelText");
+		//SceneManager.LoadScene("Prototype Scene");
 	}
 }
