@@ -21,6 +21,7 @@ public class TouchControl : MonoBehaviour {
 		int i = 0; //
 
 		while (i < Input.touchCount){
+			Debug.Log(Input.GetTouch(i).position.x);
 			if (Input.GetTouch(i).position.x > ScreenWidth/2){
 				//move right
 				RunCharacter(1.0f);//
