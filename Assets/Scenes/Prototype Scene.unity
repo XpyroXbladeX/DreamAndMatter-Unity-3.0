@@ -212,8 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  meter: 50
-  meterText: {fileID: 1237467517}
+  timeText: {fileID: 1237467517}
 --- !u!54 &42265688
 Rigidbody:
   m_ObjectHideFlags: 0

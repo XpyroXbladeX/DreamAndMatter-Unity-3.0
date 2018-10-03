@@ -7,22 +7,38 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 10f;
 	public static int meter;
-	public Text meterText;
+	public static float timeLeft;
+	public Text timeText;
+	public static float meterDeteriorationSpeed;
 
 	// Use this for initialization
 	void Start () {
-		meter = 50;
-		meterText.text = meter.ToString();
+		meter = 80;
+		timeLeft = 120;
+		meterDeteriorationSpeed = 3;
+		timeText.text = timeLeft.ToString();
 	}
 
 	// Update is called once per frame
 	void Update () {
 
 		transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed, 0f, 0f);
-		meterText.text = meter.ToString();
+		//meterText.text = meter.ToString();
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			SceneManager.LoadScene ("MainMenu");
+		}
+
+		//Updates Time Left for level
+		timeLeft -= Time.deltaTime;
+		timeText.text = timeLeft.ToString ();
+
+		//Updates Timer until next meter Decrease
+		if (meterDeteriorationSpeed <= 0) {
+			meter--;
+			meterDeteriorationSpeed = 3;
+		} else {
+			meterDeteriorationSpeed -= Time.deltaTime;
 		}
 
 	}
