@@ -9,13 +9,13 @@ public class TouchControl : MonoBehaviour {
 	private Rigidbody characterBody; //
 	private float ScreenWidth; //
 
-	// Use this for initialization
+
 	void Start () {
 		ScreenWidth = Screen.width; //
 		characterBody = character.GetComponent<Rigidbody>(); //
 	}
 
-	// Update is called once per frame
+
 	void Update () {
 
 		int i = 0; //
