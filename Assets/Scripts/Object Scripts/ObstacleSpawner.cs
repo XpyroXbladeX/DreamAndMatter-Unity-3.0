@@ -22,7 +22,7 @@ public class ObstacleSpawner : MonoBehaviour {
 			//Debug.Log ("X position is " + xPos);
 			Instantiate(Obstacle, new Vector3(xPos,-10,0), Quaternion.identity);
 			//Debug.Log("Obstacle Spawned!!!");
-			timer = 3;
+			timer = 1;
 		} else if (timer > 0) {
 			timer -= Time.deltaTime;
 		}
